@@ -1,9 +1,6 @@
 package Entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "allnation", schema = "public", catalog = "postgres")
@@ -15,9 +12,9 @@ public class AllnationEntity {
     private String leader;
     private String description;
 
-    @Basic
+    @Id
     @Column(name = "id")
-    public Integer getId() {
+    Integer getId() {
         return id;
     }
 

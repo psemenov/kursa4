@@ -9,6 +9,12 @@
       <element id="directory" name="ejb.jar">
         <element id="artifact" artifact-name="Kursa42:ejb exploded" />
       </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="JPA 2.0-2.0" />
+        <element id="library" level="project" name="Mojarra-2.2.1" />
+        <element id="library" level="project" name="org.hibernate:hibernate-entitymanager:4.2.0.Final" />
+        <element id="library" level="project" name="org.postgresql:postgresql:42.1.4" />
+      </element>
     </root>
   </artifact>
 </component>

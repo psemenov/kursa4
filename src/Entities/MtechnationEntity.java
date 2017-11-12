@@ -52,7 +52,7 @@ public class MtechnationEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "mtech_id", referencedColumnName = "mtech_id", nullable = false)
+    @JoinColumn(name = "mtech_id", referencedColumnName = "mtech_id", nullable = false, insertable = false, updatable = false)
     public MilitaryTechnologyEntity getMilitaryTechnologyByMtechId() {
         return militaryTechnologyByMtechId;
     }
@@ -62,7 +62,7 @@ public class MtechnationEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "nation_id", referencedColumnName = "nation_id", nullable = false)
+    @JoinColumn(name = "nation_id", referencedColumnName = "nation_id", nullable = false, insertable = false, updatable = false)
     public NationEntity getNationByNationId() {
         return nationByNationId;
     }

@@ -20,7 +20,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="NewPersistenceUnit" value="624109d9-1c0f-4a96-8a5c-8c82e6574787" />
+          <factory-entry name="NewPersistenceUnit" value="3f69d9ce-e1b8-4c78-b89d-239aa73c39bf" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
       </configuration>
@@ -47,5 +47,7 @@
     <orderEntry type="library" name="ejb-3.2" level="project" />
     <orderEntry type="library" name="JPA 2.0-2.0" level="project" />
     <orderEntry type="library" name="Mojarra-2.2.1" level="project" />
+    <orderEntry type="library" name="org.hibernate:hibernate-entitymanager:4.2.0.Final" level="project" />
+    <orderEntry type="library" name="org.postgresql:postgresql:42.1.4" level="project" />
   </component>
 </module>
