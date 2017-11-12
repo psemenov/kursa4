@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12417</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-11-12.12:12:24.387</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1022</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12125</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="book_book_id_seq">
+      <ObjectId>16387</ObjectId>
+      <StateNumber>667</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="character_character_id_seq">
+      <ObjectId>16560</ObjectId>
+      <StateNumber>676</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="11" parent="3" name="character_type_ctype_id_seq">
+      <ObjectId>16499</ObjectId>
+      <StateNumber>673</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="12" parent="3" name="episode_episode_id_seq">
+      <ObjectId>16402</ObjectId>
+      <StateNumber>668</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="13" parent="3" name="magic_base_m_base_id_seq">
+      <ObjectId>16422</ObjectId>
+      <StateNumber>669</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="14" parent="3" name="magic_basic_mbasic_id_seq">
+      <ObjectId>16479</ObjectId>
+      <StateNumber>672</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="15" parent="3" name="magic_m_id_seq">
+      <ObjectId>16437</ObjectId>
+      <StateNumber>670</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="16" parent="3" name="magic_skills_mskill_id_seq">
+      <ObjectId>16459</ObjectId>
+      <StateNumber>671</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="17" parent="3" name="military_technology_mtech_id_seq">
+      <ObjectId>16604</ObjectId>
+      <StateNumber>678</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="18" parent="3" name="nation_nation_id_seq">
+      <ObjectId>16538</ObjectId>
+      <StateNumber>675</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="19" parent="3" name="place_authority_pa_id_seq">
+      <ObjectId>16731</ObjectId>
+      <StateNumber>684</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="20" parent="3" name="place_place_id_seq">
+      <ObjectId>16513</ObjectId>
+      <StateNumber>674</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="21" parent="3" name="unique_skills_uskill_id_seq">
+      <ObjectId>16659</ObjectId>
+      <StateNumber>681</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="22" parent="3" name="book">
+      <ObjectId>16389</ObjectId>
+      <StateNumber>668</StateNumber>
+    </table>
+    <table id="23" parent="3" name="character">
+      <ObjectId>16562</ObjectId>
+      <StateNumber>684</StateNumber>
+    </table>
+    <table id="24" parent="3" name="character_type">
+      <ObjectId>16501</ObjectId>
+      <StateNumber>676</StateNumber>
+    </table>
+    <table id="25" parent="3" name="characterorganization">
+      <ObjectId>16716</ObjectId>
+      <StateNumber>683</StateNumber>
+    </table>
+    <table id="26" parent="3" name="episode">
+      <ObjectId>16404</ObjectId>
+      <StateNumber>684</StateNumber>
+    </table>
+    <table id="27" parent="3" name="magic">
+      <ObjectId>16439</ObjectId>
+      <StateNumber>681</StateNumber>
+    </table>
+    <table id="28" parent="3" name="magic_base">
+      <ObjectId>16424</ObjectId>
+      <StateNumber>670</StateNumber>
+    </table>
+    <table id="29" parent="3" name="magic_basic">
+      <ObjectId>16481</ObjectId>
+      <StateNumber>672</StateNumber>
+    </table>
+    <table id="30" parent="3" name="magic_skills">
+      <ObjectId>16461</ObjectId>
+      <StateNumber>671</StateNumber>
+    </table>
+    <table id="31" parent="3" name="military_technology">
+      <ObjectId>16606</ObjectId>
+      <StateNumber>680</StateNumber>
+    </table>
+    <table id="32" parent="3" name="mtechcharacter">
+      <ObjectId>16644</ObjectId>
+      <StateNumber>680</StateNumber>
+    </table>
+    <table id="33" parent="3" name="mtechnation">
+      <ObjectId>16629</ObjectId>
+      <StateNumber>679</StateNumber>
+    </table>
+    <table id="34" parent="3" name="nation">
+      <ObjectId>16540</ObjectId>
+      <StateNumber>684</StateNumber>
+    </table>
+    <table id="35" parent="3" name="nationleader">
+      <ObjectId>16589</ObjectId>
+      <StateNumber>1021</StateNumber>
+    </table>
+    <table id="36" parent="3" name="organization">
+      <ObjectId>16684</ObjectId>
+      <StateNumber>1019</StateNumber>
+    </table>
+    <table id="37" parent="3" name="place">
+      <ObjectId>16515</ObjectId>
+      <StateNumber>684</StateNumber>
+    </table>
+    <table id="38" parent="3" name="place_authority">
+      <ObjectId>16733</ObjectId>
+      <StateNumber>1016</StateNumber>
+    </table>
+    <table id="39" parent="3" name="unique_skills">
+      <ObjectId>16661</ObjectId>
+      <StateNumber>681</StateNumber>
+    </table>
+    <view id="40" parent="3" name="allnation">
+      <ObjectId>16776</ObjectId>
+      <StateNumber>1017</StateNumber>
+    </view>
+    <routine id="41" parent="3" name="charorg">
+      <ObjectId>16781</ObjectId>
+      <StateNumber>1018</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <routine id="42" parent="3" name="leaderchkfunct">
+      <ObjectId>16783</ObjectId>
+      <StateNumber>1020</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <routine id="43" parent="3" name="placetree">
+      <ObjectId>16785</ObjectId>
+      <StateNumber>1022</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>text</ArgumentsDefinition>
+      <ResultsDefinition>SETOF text</ResultsDefinition>
+      <LanguageName>sql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ReturnsSet>1</ReturnsSet>
+    </routine>
+    <routine id="44" parent="3" name="wararchfunct">
+      <ObjectId>16774</ObjectId>
+      <StateNumber>1015</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <column id="45" parent="22" name="book_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>667</StateNumber>
+      <SequenceName>book_book_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;book_book_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="46" parent="22" name="b_name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>667</StateNumber>
+    </column>
+    <column id="47" parent="22" name="b_desc">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>667</StateNumber>
+    </column>
+    <index id="48" parent="22" name="book_pkey">
+      <ObjectId>16396</ObjectId>
+      <ColNames>book_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="49" parent="22" name="book_b_name_key">
+      <ObjectId>16398</ObjectId>
+      <ColNames>b_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="50" parent="22" name="book_b_desc_key">
+      <ObjectId>16400</ObjectId>
+      <ColNames>b_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="22" name="book_pkey">
+      <ObjectId>16397</ObjectId>
+      <ColNames>book_id</ColNames>
+      <UnderlyingIndexName>book_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="52" parent="22" name="book_b_name_key">
+      <ObjectId>16399</ObjectId>
+      <ColNames>b_name</ColNames>
+      <UnderlyingIndexName>book_b_name_key</UnderlyingIndexName>
+    </key>
+    <key id="53" parent="22" name="book_b_desc_key">
+      <ObjectId>16401</ObjectId>
+      <ColNames>b_desc</ColNames>
+      <UnderlyingIndexName>book_b_desc_key</UnderlyingIndexName>
+    </key>
+    <column id="54" parent="23" name="character_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
+      <SequenceName>character_character_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;character_character_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="55" parent="23" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
+    </column>
+    <column id="56" parent="23" name="gender">
+      <Position>3</Position>
+      <DataType>char|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
+    </column>
+    <column id="57" parent="23" name="ctype_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
+    </column>
+    <column id="58" parent="23" name="m_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>676</StateNumber>
+    </column>
+    <column id="59" parent="23" name="nation_id">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>676</StateNumber>
+    </column>
+    <column id="60" parent="23" name="episode_id">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
+    </column>
+    <index id="61" parent="23" name="character_pkey">
+      <ObjectId>16567</ObjectId>
+      <ColNames>character_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="62" parent="23" name="charactermagic">
+      <ObjectId>16766</ObjectId>
+      <ColNames>m_id</ColNames>
+    </index>
+    <index id="63" parent="23" name="characternation">
+      <ObjectId>16767</ObjectId>
+      <ColNames>nation_id</ColNames>
+    </index>
+    <key id="64" parent="23" name="character_pkey">
+      <ObjectId>16568</ObjectId>
+      <ColNames>character_id</ColNames>
+      <UnderlyingIndexName>character_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="23" name="character_ctype_id_fkey">
+      <ObjectId>16569</ObjectId>
+      <ColNames>ctype_id</ColNames>
+      <RefTableId>16501</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character_type</RefTableName>
+      <RefKeyName>character_type_pkey</RefKeyName>
+      <RefColNames>ctype_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="66" parent="23" name="character_m_id_fkey">
+      <ObjectId>16574</ObjectId>
+      <ColNames>m_id</ColNames>
+      <RefTableId>16439</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>magic</RefTableName>
+      <RefKeyName>magic_pkey</RefKeyName>
+      <RefColNames>m_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="67" parent="23" name="character_nation_id_fkey">
+      <ObjectId>16579</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <RefTableId>16540</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>nation</RefTableName>
+      <RefKeyName>nation_pkey</RefKeyName>
+      <RefColNames>nation_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="68" parent="23" name="character_episode_id_fkey">
+      <ObjectId>16584</ObjectId>
+      <ColNames>episode_id</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>episode</RefTableName>
+      <RefKeyName>episode_pkey</RefKeyName>
+      <RefColNames>episode_id</RefColNames>
+    </foreign-key>
+    <check id="69" parent="23" name="gender_ch">
+      <ObjectId>16566</ObjectId>
+      <ColNames>gender</ColNames>
+      <Predicate>gender = ANY (ARRAY[&apos;м&apos;::bpchar, &apos;ж&apos;::bpchar])</Predicate>
+    </check>
+    <column id="70" parent="24" name="ctype_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>673</StateNumber>
+      <SequenceName>character_type_ctype_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;character_type_ctype_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="71" parent="24" name="ctype_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>673</StateNumber>
+    </column>
+    <column id="72" parent="24" name="csubtype_name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>673</StateNumber>
+    </column>
+    <column id="73" parent="24" name="ctype_desc">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>673</StateNumber>
+    </column>
+    <index id="74" parent="24" name="character_type_pkey">
+      <ObjectId>16509</ObjectId>
+      <ColNames>ctype_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="75" parent="24" name="character_type_ctype_desc_key">
+      <ObjectId>16511</ObjectId>
+      <ColNames>ctype_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="24" name="character_type_pkey">
+      <ObjectId>16510</ObjectId>
+      <ColNames>ctype_id</ColNames>
+      <UnderlyingIndexName>character_type_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="77" parent="24" name="character_type_ctype_desc_key">
+      <ObjectId>16512</ObjectId>
+      <ColNames>ctype_desc</ColNames>
+      <UnderlyingIndexName>character_type_ctype_desc_key</UnderlyingIndexName>
+    </key>
+    <check id="78" parent="24" name="ctype_ch">
+      <ObjectId>16505</ObjectId>
+      <ColNames>ctype_name</ColNames>
+      <Predicate>(ctype_name)::text = ANY ((ARRAY[&apos;человек&apos;::character varying, &apos;дух&apos;::character varying, &apos;животное&apos;::character varying])::text[])</Predicate>
+    </check>
+    <column id="79" parent="25" name="member">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>683</StateNumber>
+    </column>
+    <column id="80" parent="25" name="org_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>683</StateNumber>
+    </column>
+    <index id="81" parent="25" name="characterorganization_pkey">
+      <ObjectId>16719</ObjectId>
+      <ColNames>member</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="82" parent="25" name="charorg">
+      <ObjectId>16771</ObjectId>
+      <ColNames>org_name</ColNames>
+    </index>
+    <key id="83" parent="25" name="characterorganization_pkey">
+      <ObjectId>16720</ObjectId>
+      <ColNames>member</ColNames>
+      <UnderlyingIndexName>characterorganization_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="84" parent="25" name="characterorganization_member_fkey">
+      <ObjectId>16721</ObjectId>
+      <ColNames>member</ColNames>
+      <RefTableId>16562</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character</RefTableName>
+      <RefKeyName>character_pkey</RefKeyName>
+      <RefColNames>character_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="85" parent="25" name="characterorganization_org_name_fkey">
+      <ObjectId>16726</ObjectId>
+      <ColNames>org_name</ColNames>
+      <RefTableId>16684</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>organization</RefTableName>
+      <RefKeyName>organization_pkey</RefKeyName>
+      <RefColNames>org_name</RefColNames>
+    </foreign-key>
+    <column id="86" parent="26" name="episode_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+      <SequenceName>episode_episode_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;episode_episode_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="87" parent="26" name="e_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+    </column>
+    <column id="88" parent="26" name="release_date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+    </column>
+    <column id="89" parent="26" name="e_number">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+    </column>
+    <column id="90" parent="26" name="book_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+    </column>
+    <column id="91" parent="26" name="e_desc">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>668</StateNumber>
+    </column>
+    <index id="92" parent="26" name="episode_pkey">
+      <ObjectId>16411</ObjectId>
+      <ColNames>episode_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="93" parent="26" name="episode_e_name_key">
+      <ObjectId>16413</ObjectId>
+      <ColNames>e_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="94" parent="26" name="episode_e_desc_key">
+      <ObjectId>16415</ObjectId>
+      <ColNames>e_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="95" parent="26" name="episode_pkey">
+      <ObjectId>16412</ObjectId>
+      <ColNames>episode_id</ColNames>
+      <UnderlyingIndexName>episode_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="96" parent="26" name="episode_e_name_key">
+      <ObjectId>16414</ObjectId>
+      <ColNames>e_name</ColNames>
+      <UnderlyingIndexName>episode_e_name_key</UnderlyingIndexName>
+    </key>
+    <key id="97" parent="26" name="episode_e_desc_key">
+      <ObjectId>16416</ObjectId>
+      <ColNames>e_desc</ColNames>
+      <UnderlyingIndexName>episode_e_desc_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="98" parent="26" name="episode_book_id_fkey">
+      <ObjectId>16417</ObjectId>
+      <ColNames>book_id</ColNames>
+      <RefTableId>16389</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>book</RefTableName>
+      <RefKeyName>book_pkey</RefKeyName>
+      <RefColNames>book_id</RefColNames>
+    </foreign-key>
+    <column id="99" parent="27" name="m_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>670</StateNumber>
+      <SequenceName>magic_m_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;magic_m_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="100" parent="27" name="m_type">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>670</StateNumber>
+    </column>
+    <column id="101" parent="27" name="m_base">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>670</StateNumber>
+    </column>
+    <column id="102" parent="27" name="m_desc">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>670</StateNumber>
+    </column>
+    <index id="103" parent="27" name="magic_pkey">
+      <ObjectId>16446</ObjectId>
+      <ColNames>m_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="104" parent="27" name="magic_m_type_key">
+      <ObjectId>16448</ObjectId>
+      <ColNames>m_type</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="105" parent="27" name="magic_m_base_key">
+      <ObjectId>16450</ObjectId>
+      <ColNames>m_base</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="106" parent="27" name="magic_m_desc_key">
+      <ObjectId>16452</ObjectId>
+      <ColNames>m_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="107" parent="27" name="magic_pkey">
+      <ObjectId>16447</ObjectId>
+      <ColNames>m_id</ColNames>
+      <UnderlyingIndexName>magic_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="108" parent="27" name="magic_m_type_key">
+      <ObjectId>16449</ObjectId>
+      <ColNames>m_type</ColNames>
+      <UnderlyingIndexName>magic_m_type_key</UnderlyingIndexName>
+    </key>
+    <key id="109" parent="27" name="magic_m_base_key">
+      <ObjectId>16451</ObjectId>
+      <ColNames>m_base</ColNames>
+      <UnderlyingIndexName>magic_m_base_key</UnderlyingIndexName>
+    </key>
+    <key id="110" parent="27" name="magic_m_desc_key">
+      <ObjectId>16453</ObjectId>
+      <ColNames>m_desc</ColNames>
+      <UnderlyingIndexName>magic_m_desc_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="111" parent="27" name="magic_m_base_fkey">
+      <ObjectId>16454</ObjectId>
+      <ColNames>m_base</ColNames>
+      <RefTableId>16424</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>magic_base</RefTableName>
+      <RefKeyName>magic_base_pkey</RefKeyName>
+      <RefColNames>m_base_id</RefColNames>
+    </foreign-key>
+    <column id="112" parent="28" name="m_base_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>669</StateNumber>
+      <SequenceName>magic_base_m_base_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;magic_base_m_base_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="113" parent="28" name="mbase_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>669</StateNumber>
+    </column>
+    <column id="114" parent="28" name="mbase_desc">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>669</StateNumber>
+    </column>
+    <index id="115" parent="28" name="magic_base_pkey">
+      <ObjectId>16431</ObjectId>
+      <ColNames>m_base_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="116" parent="28" name="magic_base_mbase_name_key">
+      <ObjectId>16433</ObjectId>
+      <ColNames>mbase_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="117" parent="28" name="magic_base_mbase_desc_key">
+      <ObjectId>16435</ObjectId>
+      <ColNames>mbase_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="118" parent="28" name="magic_base_pkey">
+      <ObjectId>16432</ObjectId>
+      <ColNames>m_base_id</ColNames>
+      <UnderlyingIndexName>magic_base_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="119" parent="28" name="magic_base_mbase_name_key">
+      <ObjectId>16434</ObjectId>
+      <ColNames>mbase_name</ColNames>
+      <UnderlyingIndexName>magic_base_mbase_name_key</UnderlyingIndexName>
+    </key>
+    <key id="120" parent="28" name="magic_base_mbase_desc_key">
+      <ObjectId>16436</ObjectId>
+      <ColNames>mbase_desc</ColNames>
+      <UnderlyingIndexName>magic_base_mbase_desc_key</UnderlyingIndexName>
+    </key>
+    <column id="121" parent="29" name="mbasic_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>672</StateNumber>
+      <SequenceName>magic_basic_mbasic_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;magic_basic_mbasic_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="122" parent="29" name="m_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>672</StateNumber>
+    </column>
+    <column id="123" parent="29" name="mbasic_name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>672</StateNumber>
+    </column>
+    <column id="124" parent="29" name="mbasic_desc">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>672</StateNumber>
+    </column>
+    <index id="125" parent="29" name="magic_basic_pkey">
+      <ObjectId>16488</ObjectId>
+      <ColNames>mbasic_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="126" parent="29" name="magic_basic_mbasic_name_key">
+      <ObjectId>16490</ObjectId>
+      <ColNames>mbasic_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="127" parent="29" name="magic_basic_mbasic_desc_key">
+      <ObjectId>16492</ObjectId>
+      <ColNames>mbasic_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="128" parent="29" name="magic_basic_pkey">
+      <ObjectId>16489</ObjectId>
+      <ColNames>mbasic_id</ColNames>
+      <UnderlyingIndexName>magic_basic_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="129" parent="29" name="magic_basic_mbasic_name_key">
+      <ObjectId>16491</ObjectId>
+      <ColNames>mbasic_name</ColNames>
+      <UnderlyingIndexName>magic_basic_mbasic_name_key</UnderlyingIndexName>
+    </key>
+    <key id="130" parent="29" name="magic_basic_mbasic_desc_key">
+      <ObjectId>16493</ObjectId>
+      <ColNames>mbasic_desc</ColNames>
+      <UnderlyingIndexName>magic_basic_mbasic_desc_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="131" parent="29" name="magic_basic_m_id_fkey">
+      <ObjectId>16494</ObjectId>
+      <ColNames>m_id</ColNames>
+      <RefTableId>16439</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>magic</RefTableName>
+      <RefKeyName>magic_pkey</RefKeyName>
+      <RefColNames>m_id</RefColNames>
+    </foreign-key>
+    <column id="132" parent="30" name="mskill_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>671</StateNumber>
+      <SequenceName>magic_skills_mskill_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;magic_skills_mskill_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="133" parent="30" name="m_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>671</StateNumber>
+    </column>
+    <column id="134" parent="30" name="mskill_name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>671</StateNumber>
+    </column>
+    <column id="135" parent="30" name="mskill_level">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>671</StateNumber>
+    </column>
+    <column id="136" parent="30" name="mskill_desc">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>671</StateNumber>
+    </column>
+    <index id="137" parent="30" name="magic_skills_pkey">
+      <ObjectId>16468</ObjectId>
+      <ColNames>mskill_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="138" parent="30" name="magic_skills_mskill_name_key">
+      <ObjectId>16470</ObjectId>
+      <ColNames>mskill_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="139" parent="30" name="magic_skills_mskill_desc_key">
+      <ObjectId>16472</ObjectId>
+      <ColNames>mskill_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="140" parent="30" name="skillslevel">
+      <ObjectId>16765</ObjectId>
+      <ColNames>mskill_level</ColNames>
+    </index>
+    <key id="141" parent="30" name="magic_skills_pkey">
+      <ObjectId>16469</ObjectId>
+      <ColNames>mskill_id</ColNames>
+      <UnderlyingIndexName>magic_skills_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="142" parent="30" name="magic_skills_mskill_name_key">
+      <ObjectId>16471</ObjectId>
+      <ColNames>mskill_name</ColNames>
+      <UnderlyingIndexName>magic_skills_mskill_name_key</UnderlyingIndexName>
+    </key>
+    <key id="143" parent="30" name="magic_skills_mskill_desc_key">
+      <ObjectId>16473</ObjectId>
+      <ColNames>mskill_desc</ColNames>
+      <UnderlyingIndexName>magic_skills_mskill_desc_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="144" parent="30" name="magic_skills_m_id_fkey">
+      <ObjectId>16474</ObjectId>
+      <ColNames>m_id</ColNames>
+      <RefTableId>16439</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>magic</RefTableName>
+      <RefKeyName>magic_pkey</RefKeyName>
+      <RefColNames>m_id</RefColNames>
+    </foreign-key>
+    <column id="145" parent="31" name="mtech_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>678</StateNumber>
+      <SequenceName>military_technology_mtech_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;military_technology_mtech_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="146" parent="31" name="character_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>678</StateNumber>
+    </column>
+    <column id="147" parent="31" name="mtech_name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>678</StateNumber>
+    </column>
+    <column id="148" parent="31" name="mtech_type">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>678</StateNumber>
+    </column>
+    <column id="149" parent="31" name="nation_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>678</StateNumber>
+    </column>
+    <column id="150" parent="31" name="mtech_desc">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>678</StateNumber>
+    </column>
+    <index id="151" parent="31" name="military_technology_pkey">
+      <ObjectId>16613</ObjectId>
+      <ColNames>mtech_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="152" parent="31" name="military_technology_mtech_name_key">
+      <ObjectId>16615</ObjectId>
+      <ColNames>mtech_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="153" parent="31" name="military_technology_mtech_desc_key">
+      <ObjectId>16617</ObjectId>
+      <ColNames>mtech_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="154" parent="31" name="military_technology_pkey">
+      <ObjectId>16614</ObjectId>
+      <ColNames>mtech_id</ColNames>
+      <UnderlyingIndexName>military_technology_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="155" parent="31" name="military_technology_mtech_name_key">
+      <ObjectId>16616</ObjectId>
+      <ColNames>mtech_name</ColNames>
+      <UnderlyingIndexName>military_technology_mtech_name_key</UnderlyingIndexName>
+    </key>
+    <key id="156" parent="31" name="military_technology_mtech_desc_key">
+      <ObjectId>16618</ObjectId>
+      <ColNames>mtech_desc</ColNames>
+      <UnderlyingIndexName>military_technology_mtech_desc_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="157" parent="31" name="military_technology_character_id_fkey">
+      <ObjectId>16619</ObjectId>
+      <ColNames>character_id</ColNames>
+      <RefTableId>16562</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character</RefTableName>
+      <RefKeyName>character_pkey</RefKeyName>
+      <RefColNames>character_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="158" parent="31" name="military_technology_nation_id_fkey">
+      <ObjectId>16624</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <RefTableId>16540</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>nation</RefTableName>
+      <RefKeyName>nation_pkey</RefKeyName>
+      <RefColNames>nation_id</RefColNames>
+    </foreign-key>
+    <column id="159" parent="32" name="mtech_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>680</StateNumber>
+    </column>
+    <column id="160" parent="32" name="character_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>680</StateNumber>
+    </column>
+    <index id="161" parent="32" name="mtechcharacter_pkey">
+      <ObjectId>16647</ObjectId>
+      <ColNames>mtech_id
+character_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="162" parent="32" name="mtmtechnation">
+      <ObjectId>16769</ObjectId>
+      <ColNames>character_id</ColNames>
+    </index>
+    <key id="163" parent="32" name="mtechcharacter_pkey">
+      <ObjectId>16648</ObjectId>
+      <ColNames>mtech_id
+character_id</ColNames>
+      <UnderlyingIndexName>mtechcharacter_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="164" parent="32" name="mtechcharacter_mtech_id_fkey">
+      <ObjectId>16649</ObjectId>
+      <ColNames>mtech_id</ColNames>
+      <RefTableId>16606</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>military_technology</RefTableName>
+      <RefKeyName>military_technology_pkey</RefKeyName>
+      <RefColNames>mtech_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="165" parent="32" name="mtechcharacter_character_id_fkey">
+      <ObjectId>16654</ObjectId>
+      <ColNames>character_id</ColNames>
+      <RefTableId>16562</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character</RefTableName>
+      <RefKeyName>character_pkey</RefKeyName>
+      <RefColNames>character_id</RefColNames>
+    </foreign-key>
+    <column id="166" parent="33" name="mtech_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>679</StateNumber>
+    </column>
+    <column id="167" parent="33" name="nation_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>679</StateNumber>
+    </column>
+    <index id="168" parent="33" name="mtechnation_pkey">
+      <ObjectId>16632</ObjectId>
+      <ColNames>mtech_id
+nation_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="169" parent="33" name="mtmtechcharacter">
+      <ObjectId>16770</ObjectId>
+      <ColNames>mtech_id
+nation_id</ColNames>
+    </index>
+    <key id="170" parent="33" name="mtechnation_pkey">
+      <ObjectId>16633</ObjectId>
+      <ColNames>mtech_id
+nation_id</ColNames>
+      <UnderlyingIndexName>mtechnation_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="171" parent="33" name="mtechnation_mtech_id_fkey">
+      <ObjectId>16634</ObjectId>
+      <ColNames>mtech_id</ColNames>
+      <RefTableId>16606</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>military_technology</RefTableName>
+      <RefKeyName>military_technology_pkey</RefKeyName>
+      <RefColNames>mtech_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="172" parent="33" name="mtechnation_nation_id_fkey">
+      <ObjectId>16639</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <RefTableId>16540</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>nation</RefTableName>
+      <RefKeyName>nation_pkey</RefKeyName>
+      <RefColNames>nation_id</RefColNames>
+    </foreign-key>
+    <column id="173" parent="34" name="nation_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>675</StateNumber>
+      <SequenceName>nation_nation_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;nation_nation_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="174" parent="34" name="nation_name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>675</StateNumber>
+    </column>
+    <column id="175" parent="34" name="place_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>675</StateNumber>
+    </column>
+    <column id="176" parent="34" name="regime">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>675</StateNumber>
+    </column>
+    <column id="177" parent="34" name="m_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>675</StateNumber>
+    </column>
+    <column id="178" parent="34" name="n_desc">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>675</StateNumber>
+    </column>
+    <index id="179" parent="34" name="nation_pkey">
+      <ObjectId>16547</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="180" parent="34" name="nation_nation_name_key">
+      <ObjectId>16549</ObjectId>
+      <ColNames>nation_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="181" parent="34" name="nation_m_id_key">
+      <ObjectId>16551</ObjectId>
+      <ColNames>m_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="182" parent="34" name="nation_n_desc_key">
+      <ObjectId>16553</ObjectId>
+      <ColNames>n_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="183" parent="34" name="nation_pkey">
+      <ObjectId>16548</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <UnderlyingIndexName>nation_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="184" parent="34" name="nation_nation_name_key">
+      <ObjectId>16550</ObjectId>
+      <ColNames>nation_name</ColNames>
+      <UnderlyingIndexName>nation_nation_name_key</UnderlyingIndexName>
+    </key>
+    <key id="185" parent="34" name="nation_m_id_key">
+      <ObjectId>16552</ObjectId>
+      <ColNames>m_id</ColNames>
+      <UnderlyingIndexName>nation_m_id_key</UnderlyingIndexName>
+    </key>
+    <key id="186" parent="34" name="nation_n_desc_key">
+      <ObjectId>16554</ObjectId>
+      <ColNames>n_desc</ColNames>
+      <UnderlyingIndexName>nation_n_desc_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="187" parent="34" name="nation_m_id_fkey">
+      <ObjectId>16555</ObjectId>
+      <ColNames>m_id</ColNames>
+      <RefTableId>16439</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>magic</RefTableName>
+      <RefKeyName>magic_pkey</RefKeyName>
+      <RefColNames>m_id</RefColNames>
+    </foreign-key>
+    <column id="188" parent="35" name="nation_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+    </column>
+    <column id="189" parent="35" name="leader">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>677</StateNumber>
+    </column>
+    <index id="190" parent="35" name="nationleader_pkey">
+      <ObjectId>16592</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="191" parent="35" name="nationleader_pkey">
+      <ObjectId>16593</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <UnderlyingIndexName>nationleader_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="192" parent="35" name="nationleader_nation_id_fkey">
+      <ObjectId>16594</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <RefTableId>16540</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>nation</RefTableName>
+      <RefKeyName>nation_pkey</RefKeyName>
+      <RefColNames>nation_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="193" parent="35" name="nationleader_leader_fkey">
+      <ObjectId>16599</ObjectId>
+      <ColNames>leader</ColNames>
+      <RefTableId>16562</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character</RefTableName>
+      <RefKeyName>character_pkey</RefKeyName>
+      <RefColNames>character_id</RefColNames>
+    </foreign-key>
+    <trigger id="194" parent="35" name="leaderchk">
+      <ObjectId>16784</ObjectId>
+      <StateNumber>1021</StateNumber>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16783</CallRoutineId>
+    </trigger>
+    <column id="195" parent="36" name="org_name">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>682</StateNumber>
+    </column>
+    <column id="196" parent="36" name="founder">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>682</StateNumber>
+    </column>
+    <column id="197" parent="36" name="leader">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>682</StateNumber>
+    </column>
+    <column id="198" parent="36" name="hq">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>682</StateNumber>
+    </column>
+    <column id="199" parent="36" name="episode_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>682</StateNumber>
+    </column>
+    <column id="200" parent="36" name="org_desc">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>682</StateNumber>
+    </column>
+    <index id="201" parent="36" name="organization_pkey">
+      <ObjectId>16690</ObjectId>
+      <ColNames>org_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="202" parent="36" name="organization_leader_key">
+      <ObjectId>16692</ObjectId>
+      <ColNames>leader</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="203" parent="36" name="organization_org_desc_key">
+      <ObjectId>16694</ObjectId>
+      <ColNames>org_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="204" parent="36" name="organization_pkey">
+      <ObjectId>16691</ObjectId>
+      <ColNames>org_name</ColNames>
+      <UnderlyingIndexName>organization_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="205" parent="36" name="organization_leader_key">
+      <ObjectId>16693</ObjectId>
+      <ColNames>leader</ColNames>
+      <UnderlyingIndexName>organization_leader_key</UnderlyingIndexName>
+    </key>
+    <key id="206" parent="36" name="organization_org_desc_key">
+      <ObjectId>16695</ObjectId>
+      <ColNames>org_desc</ColNames>
+      <UnderlyingIndexName>organization_org_desc_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="207" parent="36" name="organization_founder_fkey">
+      <ObjectId>16696</ObjectId>
+      <ColNames>founder</ColNames>
+      <RefTableId>16562</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character</RefTableName>
+      <RefKeyName>character_pkey</RefKeyName>
+      <RefColNames>character_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="208" parent="36" name="organization_leader_fkey">
+      <ObjectId>16701</ObjectId>
+      <ColNames>leader</ColNames>
+      <RefTableId>16562</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character</RefTableName>
+      <RefKeyName>character_pkey</RefKeyName>
+      <RefColNames>character_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="209" parent="36" name="organization_hq_fkey">
+      <ObjectId>16706</ObjectId>
+      <ColNames>hq</ColNames>
+      <RefTableId>16515</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>place</RefTableName>
+      <RefKeyName>place_pkey</RefKeyName>
+      <RefColNames>place_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="210" parent="36" name="organization_episode_id_fkey">
+      <ObjectId>16711</ObjectId>
+      <ColNames>episode_id</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>episode</RefTableName>
+      <RefKeyName>episode_pkey</RefKeyName>
+      <RefColNames>episode_id</RefColNames>
+    </foreign-key>
+    <trigger id="211" parent="36" name="tcharorg">
+      <ObjectId>16782</ObjectId>
+      <StateNumber>1019</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>I</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16781</CallRoutineId>
+    </trigger>
+    <column id="212" parent="37" name="place_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>674</StateNumber>
+      <SequenceName>place_place_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;place_place_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="213" parent="37" name="location_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>674</StateNumber>
+    </column>
+    <column id="214" parent="37" name="place_name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>674</StateNumber>
+    </column>
+    <column id="215" parent="37" name="details">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>674</StateNumber>
+    </column>
+    <column id="216" parent="37" name="status">
+      <Position>5</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>674</StateNumber>
+    </column>
+    <column id="217" parent="37" name="episode_id">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>674</StateNumber>
+    </column>
+    <column id="218" parent="37" name="regime">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>674</StateNumber>
+    </column>
+    <index id="219" parent="37" name="place_pkey">
+      <ObjectId>16522</ObjectId>
+      <ColNames>place_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="220" parent="37" name="place_place_name_key">
+      <ObjectId>16524</ObjectId>
+      <ColNames>place_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="221" parent="37" name="place_details_key">
+      <ObjectId>16526</ObjectId>
+      <ColNames>details</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="222" parent="37" name="place_pkey">
+      <ObjectId>16523</ObjectId>
+      <ColNames>place_id</ColNames>
+      <UnderlyingIndexName>place_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="223" parent="37" name="place_place_name_key">
+      <ObjectId>16525</ObjectId>
+      <ColNames>place_name</ColNames>
+      <UnderlyingIndexName>place_place_name_key</UnderlyingIndexName>
+    </key>
+    <key id="224" parent="37" name="place_details_key">
+      <ObjectId>16527</ObjectId>
+      <ColNames>details</ColNames>
+      <UnderlyingIndexName>place_details_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="225" parent="37" name="place_location_id_fkey">
+      <ObjectId>16528</ObjectId>
+      <ColNames>location_id</ColNames>
+      <RefTableId>16515</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>place</RefTableName>
+      <RefKeyName>place_pkey</RefKeyName>
+      <RefColNames>place_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="226" parent="37" name="place_episode_id_fkey">
+      <ObjectId>16533</ObjectId>
+      <ColNames>episode_id</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>episode</RefTableName>
+      <RefKeyName>episode_pkey</RefKeyName>
+      <RefColNames>episode_id</RefColNames>
+    </foreign-key>
+    <column id="227" parent="38" name="pa_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>684</StateNumber>
+      <SequenceName>place_authority_pa_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;place_authority_pa_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="228" parent="38" name="head">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>684</StateNumber>
+    </column>
+    <column id="229" parent="38" name="place_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>684</StateNumber>
+    </column>
+    <column id="230" parent="38" name="nation_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>684</StateNumber>
+    </column>
+    <column id="231" parent="38" name="start">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>684</StateNumber>
+    </column>
+    <column id="232" parent="38" name="finish">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>684</StateNumber>
+    </column>
+    <index id="233" parent="38" name="place_authority_pkey">
+      <ObjectId>16737</ObjectId>
+      <ColNames>pa_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="234" parent="38" name="authorityperiod">
+      <ObjectId>16768</ObjectId>
+      <ColNames>start
+finish</ColNames>
+    </index>
+    <key id="235" parent="38" name="place_authority_pkey">
+      <ObjectId>16738</ObjectId>
+      <ColNames>pa_id</ColNames>
+      <UnderlyingIndexName>place_authority_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="236" parent="38" name="place_authority_head_fkey">
+      <ObjectId>16739</ObjectId>
+      <ColNames>head</ColNames>
+      <RefTableId>16562</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character</RefTableName>
+      <RefKeyName>character_pkey</RefKeyName>
+      <RefColNames>character_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="237" parent="38" name="place_authority_place_id_fkey">
+      <ObjectId>16744</ObjectId>
+      <ColNames>place_id</ColNames>
+      <RefTableId>16515</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>place</RefTableName>
+      <RefKeyName>place_pkey</RefKeyName>
+      <RefColNames>place_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="238" parent="38" name="place_authority_nation_id_fkey">
+      <ObjectId>16749</ObjectId>
+      <ColNames>nation_id</ColNames>
+      <RefTableId>16540</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>nation</RefTableName>
+      <RefKeyName>nation_pkey</RefKeyName>
+      <RefColNames>nation_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="239" parent="38" name="place_authority_start_fkey">
+      <ObjectId>16754</ObjectId>
+      <ColNames>start</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>episode</RefTableName>
+      <RefKeyName>episode_pkey</RefKeyName>
+      <RefColNames>episode_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="240" parent="38" name="place_authority_finish_fkey">
+      <ObjectId>16759</ObjectId>
+      <ColNames>finish</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>episode</RefTableName>
+      <RefKeyName>episode_pkey</RefKeyName>
+      <RefColNames>episode_id</RefColNames>
+    </foreign-key>
+    <trigger id="241" parent="38" name="wararch">
+      <ObjectId>16775</ObjectId>
+      <StateNumber>1016</StateNumber>
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16774</CallRoutineId>
+    </trigger>
+    <column id="242" parent="39" name="uskill_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>681</StateNumber>
+      <SequenceName>unique_skills_uskill_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;unique_skills_uskill_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="243" parent="39" name="m_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>681</StateNumber>
+    </column>
+    <column id="244" parent="39" name="uskill_name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>681</StateNumber>
+    </column>
+    <column id="245" parent="39" name="character_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>681</StateNumber>
+    </column>
+    <column id="246" parent="39" name="uskill_desc">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>681</StateNumber>
+    </column>
+    <index id="247" parent="39" name="unique_skills_pkey">
+      <ObjectId>16668</ObjectId>
+      <ColNames>uskill_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="248" parent="39" name="unique_skills_uskill_name_key">
+      <ObjectId>16670</ObjectId>
+      <ColNames>uskill_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="249" parent="39" name="unique_skills_uskill_desc_key">
+      <ObjectId>16672</ObjectId>
+      <ColNames>uskill_desc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="250" parent="39" name="unique_skills_pkey">
+      <ObjectId>16669</ObjectId>
+      <ColNames>uskill_id</ColNames>
+      <UnderlyingIndexName>unique_skills_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="251" parent="39" name="unique_skills_uskill_name_key">
+      <ObjectId>16671</ObjectId>
+      <ColNames>uskill_name</ColNames>
+      <UnderlyingIndexName>unique_skills_uskill_name_key</UnderlyingIndexName>
+    </key>
+    <key id="252" parent="39" name="unique_skills_uskill_desc_key">
+      <ObjectId>16673</ObjectId>
+      <ColNames>uskill_desc</ColNames>
+      <UnderlyingIndexName>unique_skills_uskill_desc_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="253" parent="39" name="unique_skills_m_id_fkey">
+      <ObjectId>16674</ObjectId>
+      <ColNames>m_id</ColNames>
+      <RefTableId>16439</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>magic</RefTableName>
+      <RefKeyName>magic_pkey</RefKeyName>
+      <RefColNames>m_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="254" parent="39" name="unique_skills_character_id_fkey">
+      <ObjectId>16679</ObjectId>
+      <ColNames>character_id</ColNames>
+      <RefTableId>16562</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>character</RefTableName>
+      <RefKeyName>character_pkey</RefKeyName>
+      <RefColNames>character_id</RefColNames>
+    </foreign-key>
+    <column id="255" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>1017</StateNumber>
+    </column>
+    <column id="256" parent="40" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>1017</StateNumber>
+    </column>
+    <column id="257" parent="40" name="magic">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>1017</StateNumber>
+    </column>
+    <column id="258" parent="40" name="capital">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1017</StateNumber>
+    </column>
+    <column id="259" parent="40" name="leader">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <StateNumber>1017</StateNumber>
+    </column>
+    <column id="260" parent="40" name="description">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>1017</StateNumber>
+    </column>
+    <argument id="261" parent="41">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+    <argument id="262" parent="42">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+    <argument id="263" parent="43">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </argument>
+    <argument id="264" parent="43">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>setof text|0</DataType>
+    </argument>
+    <argument id="265" parent="44">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>

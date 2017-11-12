@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    CRUD operations for table character
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputLabel for="characterID">
+            <h:outputText value="Enter character ID"/> <!--//add get/set params-->
+        </h:outputLabel>
+        <h:inputText id = "characterID" value="TODO"/>
+
+        <br/>
+
+        <h:outputLabel for="characterName">
+            <h:outputText value="Enter character name"/>
+        </h:outputLabel>
+        <h:inputText id = "characterName" value="TODO"/>
+
+        <br/>
+
+        <h:outputLabel for="characterGender">
+            <h:outputText value="Enter character gender"/>
+        </h:outputLabel>
+        <h:inputText id = "characterGender" value="TODO"/>
+        <br/>
+
+        <h:outputLabel for="character_typeID">
+            <h:outputText value="Enter character character_typeID"/>
+        </h:outputLabel>
+        <h:inputText id = "character_typeID" value="TODO"/>
+        <br/>
+
+        <h:outputLabel for="m_ID">
+            <h:outputText value="Enter character magic_ID"/>
+        </h:outputLabel>
+        <h:inputText id = "m_ID" value="TODO"/>
+        <br/>
+
+        <h:outputLabel for="nation_ID">
+            <h:outputText value="Enter character nation_ID"/>
+        </h:outputLabel>
+        <h:inputText id = "nation_ID" value="TODO"/>
+        <br/>
+
+        <h:outputLabel for="episode_ID">
+            <h:outputText value="Enter character episode_ID"/>
+        </h:outputLabel>
+        <h:inputText id = "episode_ID" value="TODO"/>
+        <br/>
+
+        <h:commandButton id="cmdCreate" value="Create" /> <!-- //add actions-->
+        <h:commandButton id="cmdRead" value="Read" />
+        <h:commandButton id="cmdUpdt" value="Update" />
+        <h:commandButton id="cmdDel" value="Delete" />
+    </h:form>
+</h:body>
+</html>

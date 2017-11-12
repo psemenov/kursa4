@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>Entities.BookEntity</class>
+        <class>Entities.CharacterEntity</class>
+        <class>Entities.CharacterTypeEntity</class>
+        <class>Entities.CharacterorganizationEntity</class>
+        <class>Entities.EpisodeEntity</class>
+        <class>Entities.MagicEntity</class>
+        <class>Entities.MagicBaseEntity</class>
+        <class>Entities.MagicBasicEntity</class>
+        <class>Entities.MagicSkillsEntity</class>
+        <class>Entities.MilitaryTechnologyEntity</class>
+        <class>Entities.MtechcharacterEntity</class>
+        <class>Entities.MtechnationEntity</class>
+        <class>Entities.NationEntity</class>
+        <class>Entities.NationleaderEntity</class>
+        <class>Entities.OrganizationEntity</class>
+        <class>Entities.PlaceEntity</class>
+        <class>Entities.PlaceAuthorityEntity</class>
+        <class>Entities.UniqueSkillsEntity</class>
+        <class>Entities.AllnationEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
