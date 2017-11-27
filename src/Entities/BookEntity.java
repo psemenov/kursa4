@@ -12,7 +12,7 @@ public class BookEntity {
     private int bookId;
 
     @Basic
-    @Column(name = "b_name" , nullable = false , unique = true)
+    @Column(name = "b_name" , nullable = false , unique = true , length = 30)
     private String bName;
 
     @Basic
@@ -21,7 +21,7 @@ public class BookEntity {
 
     @Basic
     @Column(name = "rating" , nullable = false)
-    private int rating;
+    private int rating = 0;
 
     @ManyToOne
     @JoinColumn(name = "user_id" , referencedColumnName = "user_id" , nullable = false)

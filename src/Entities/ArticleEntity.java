@@ -13,7 +13,7 @@ public class ArticleEntity {
     private int articleId;
 
     @Basic
-    @Column(name = "article_name" , nullable = false , unique = true)
+    @Column(name = "article_name" , nullable = false , unique = true , length = 200)
     private String articleName;
 
     @Basic

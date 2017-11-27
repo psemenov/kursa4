@@ -12,20 +12,20 @@ public class CharacterTypeEntity {
     private int ctypeId;
 
     @Basic
-    @Column(name = "ctype_name")
+    @Column(name = "ctype_name" , nullable = false , length = 50)
     private String ctypeName;
 
     @Basic
-    @Column(name = "csubtype_name")
+    @Column(name = "csubtype_name" , length = 50)
     private String csubtypeName;
 
     @Basic
-    @Column(name = "ctype_desc")
+    @Column(name = "ctype_desc" , unique = true)
     private String ctypeDesc;
 
     @Basic
-    @Column(name = "rating")
-    private int rating;
+    @Column(name = "rating" , nullable = false )
+    private int rating = 0;
 
     @ManyToOne
     @JoinColumn(name = "user_id" , referencedColumnName = "user_id" , nullable = false)

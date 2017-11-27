@@ -15,7 +15,6 @@ public class Main {
         book.setbDesc("fefefffffffffwftesthjjy");
         book.setbName("tefffstssffffffsseeeee");
         book.setRating(111);
-        book.setUser_id(1);
         //book.setBookId(123);
         em.persist(book);
         em.getTransaction().commit();

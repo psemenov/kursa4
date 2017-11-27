@@ -12,17 +12,28 @@ public class MagicEntity {
     private int mId;
 
     @Basic
-    @Column(name = "m_type")
+    @Column(name = "m_type" , nullable = false , unique = true)
     private String mType;
 
     @Basic
-    @Column(name = "m_desc")
+    @Column(name = "m_desc" , unique = true)
     private String mDesc;
 
     @Basic
-    @Column(name = "rating")
-    private int rating;
+    @Column(name = "rating" , nullable = false)
+    private int rating = 0;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id" , referencedColumnName = "user_id" , nullable = false)
+    private UsersEntity userByUserId;
+
+    public UsersEntity getUserByUserId() {
+        return userByUserId;
+    }
+
+    public void setUserByUserId(UsersEntity userByUserId) {
+        this.userByUserId = userByUserId;
+    }
 
     public int getmId() {
         return mId;

@@ -13,24 +13,24 @@ public class EpisodeEntity {
     private int episodeId;
 
     @Basic
-    @Column(name = "e_name")
+    @Column(name = "e_name" , nullable = false , unique = true , length = 100)
     private String eName;
 
     @Basic
-    @Column(name = "release_date")
+    @Column(name = "release_date" , nullable = false)
     private Date releaseDate;
 
     @Basic
-    @Column(name = "e_number")
+    @Column(name = "e_number" , nullable = false)
     private int eNumber;
 
     @Basic
-    @Column(name = "e_desc")
+    @Column(name = "e_desc" , unique = true)
     private String eDesc;
 
     @Basic
-    @Column(name = "rating")
-    private int rating;
+    @Column(name = "rating" , nullable = false)
+    private int rating = 0;
 
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "book_id", nullable = false)

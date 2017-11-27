@@ -12,21 +12,68 @@ public class CharacterEntity {
     private int characterId;
 
     @Basic
-    @Column(name = "name")
+    @Column(name = "name" , nullable = false)
     private String name;
 
     @Basic
-    @Column(name = "gender")
+    @Column(name = "gender" , nullable = false)
     private String gender;
 
-
     @Basic
-    @Column(name = "rating")
-    private int rating;
+    @Column(name = "rating" , nullable = false)
+    private int rating = 0;
 
     @ManyToOne
     @JoinColumn(name = "user_id" , referencedColumnName = "user_id" , nullable = false)
     private UsersEntity userByUserId;
+
+    @ManyToOne
+    @JoinColumn(name = "m_id" , referencedColumnName = "m_id" )
+    private MagicEntity magicByMagicId;
+
+    @ManyToOne
+    @JoinColumn(name = "nation_id" , referencedColumnName = "nation_id" )
+    private NationEntity nationByNationId;
+
+    @ManyToOne
+    @JoinColumn(name = "episode_id" , referencedColumnName = "episode_id" , nullable = false)
+    private EpisodeEntity episodeByEpisodeId;
+
+    @ManyToOne
+    @JoinColumn(name = "ctype_id" , referencedColumnName = "ctype_id" , nullable = false)
+    private CharacterTypeEntity ctypeByCtypeId;
+
+    public CharacterTypeEntity getCtypeByCtypeId() {
+        return ctypeByCtypeId;
+    }
+
+    public void setCtypeByCtypeId(CharacterTypeEntity ctypeByCtypeId) {
+        this.ctypeByCtypeId = ctypeByCtypeId;
+    }
+
+    public EpisodeEntity getEpisodeByEpisodeId() {
+        return episodeByEpisodeId;
+    }
+
+    public void setEpisodeByEpisodeId(EpisodeEntity episodeByEpisodeId) {
+        this.episodeByEpisodeId = episodeByEpisodeId;
+    }
+
+    public NationEntity getNationByNationId() {
+        return nationByNationId;
+    }
+
+    public void setNationByNationId(NationEntity nationByNationId) {
+        this.nationByNationId = nationByNationId;
+    }
+
+    public MagicEntity getMagicByMagicId() {
+        return magicByMagicId;
+    }
+
+    public void setMagicByMagicId(MagicEntity magicByMagicId) {
+        this.magicByMagicId = magicByMagicId;
+    }
 
     public UsersEntity getUserByUserId() {
         return userByUserId;
