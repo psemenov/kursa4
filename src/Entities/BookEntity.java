@@ -12,15 +12,15 @@ public class BookEntity {
     private int bookId;
 
     @Basic
-    @Column(name = "b_name")
+    @Column(name = "b_name" , nullable = false , unique = true)
     private String bName;
 
     @Basic
-    @Column(name = "b_desc")
+    @Column(name = "b_desc" , unique = true)
     private String bDesc;
 
     @Basic
-    @Column(name = "rating")
+    @Column(name = "rating" , nullable = false)
     private int rating;
 
     @ManyToOne
