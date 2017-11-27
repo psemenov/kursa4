@@ -18,7 +18,8 @@ public class Main {
         book.setbDesc("fefefffffffffwftesthjjy");
         book.setbName("tefffstssffffffsseeeee");
         book.setRating(111);
-        book.setUserByUserId();
+        UsersEntity user = em.find(UsersEntity.class, 1);
+        book.setUserByUserId(user);
         //book.setBookId(123);
         em.persist(book);
         em.getTransaction().commit();

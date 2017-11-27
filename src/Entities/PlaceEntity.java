@@ -31,7 +31,7 @@ public class PlaceEntity {
     private int rating = 0;
 
     @ManyToOne
-    @JoinColumn(name = "location_id" , referencedColumnName = "location_id")
+    @JoinColumn(name = "location_id" , referencedColumnName = "place_id")
     private PlaceEntity placeByLocationId;
 
     @ManyToOne

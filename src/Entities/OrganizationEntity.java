@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "organization", schema = "public", catalog = "postgres")
 public class OrganizationEntity {
     @Id
-    @Column(name = "ord_id")
+    @Column(name = "org_id")
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int orgId;
 

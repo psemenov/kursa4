@@ -19,7 +19,7 @@ public class TechnologyEntity {
     private String mtechType;
 
     @Basic
-    @Column(name = "mTech_type", unique = true)
+    @Column(name = "mTech_desc", unique = true)
     private String mtechDesc;
 
     @Basic
