@@ -1,8 +1,8 @@
+import DAO.BookDAO;
 import Entities.BookEntity;
 import Entities.UsersEntity;
-import org.omg.CORBA.UserException;
 
-import javax.jws.soap.SOAPBinding;
+import javax.faces.component.UIComponent;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -13,15 +13,17 @@ public class Main {
         EntityManagerFactory emf;
         emf = Persistence.createEntityManagerFactory("NewPersistenceUnit");
         em = emf.createEntityManager();
-        em.getTransaction().begin();
-        BookEntity book = new BookEntity();
-        book.setbDesc("fefefffffffffwftesthjjy");
-        book.setbName("tefffstssffffffsseeeee");
-        book.setRating(111);
-        UsersEntity user = em.find(UsersEntity.class, 1);
-        book.setUserByUserId(user);
-        //book.setBookId(123);
-        em.persist(book);
-        em.getTransaction().commit();
+        BookDAO bookDAO = new BookDAO(em);
+        UsersEntity user = new UsersEntity();
+        user.setUserId(1);
+        user.setLogin("gggg");
+        user.setPassword("4r4r4");
+        user.setEmail("ewea@eeeq");
+
+        BookEntity book1 = new BookEntity("name134" , 122 , user);
+
+        BookEntity book = bookDAO.read(14);
+        book.setbDesc("aaaaaeeeee");
+        bookDAO.update(book);
     }
 }

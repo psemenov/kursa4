@@ -2,8 +2,8 @@ package Entities;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "book", schema = "public", catalog = "postgres")
+@Entity(name= "book")
+//@Table(name = "book", schema = "public", catalog = "postgres")
 public class BookEntity {
 
     @Id
@@ -27,6 +27,14 @@ public class BookEntity {
     @JoinColumn(name = "user_id" , referencedColumnName = "user_id" , nullable = false)
     private UsersEntity userByUserId;
 
+    public BookEntity(String bName, int rating, UsersEntity userByUserId) {
+        this.bName = bName;
+        this.rating = rating;
+        this.userByUserId = userByUserId;
+    }
+
+    public BookEntity() {
+    }
 
     public int getBookId() {
         return bookId;
