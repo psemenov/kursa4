@@ -1,20 +1,30 @@
 package Entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "organization", schema = "public", catalog = "postgres")
 public class OrganizationEntity {
+    private int orgId;
     private String orgName;
     private String orgDesc;
-    private Collection<CharacterorganizationEntity> characterorganizationsByOrgName;
+    private int rating;
     private CharacterEntity characterByFounder;
     private CharacterEntity characterByLeader;
-    private PlaceEntity placeByHq;
     private EpisodeEntity episodeByEpisodeId;
 
     @Id
+    @Column(name = "org_id")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    public int getOrgId() {
+        return orgId;
+    }
+
+    public void setOrgId(int orgId) {
+        this.orgId = orgId;
+    }
+
+    @Basic
     @Column(name = "org_name")
     public String getOrgName() {
         return orgName;
@@ -34,6 +44,16 @@ public class OrganizationEntity {
         this.orgDesc = orgDesc;
     }
 
+    @Basic
+    @Column(name = "rating")
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -41,6 +61,8 @@ public class OrganizationEntity {
 
         OrganizationEntity that = (OrganizationEntity) o;
 
+        if (orgId != that.orgId) return false;
+        if (rating != that.rating) return false;
         if (orgName != null ? !orgName.equals(that.orgName) : that.orgName != null) return false;
         if (orgDesc != null ? !orgDesc.equals(that.orgDesc) : that.orgDesc != null) return false;
 
@@ -49,18 +71,11 @@ public class OrganizationEntity {
 
     @Override
     public int hashCode() {
-        int result = orgName != null ? orgName.hashCode() : 0;
+        int result = orgId;
+        result = 31 * result + (orgName != null ? orgName.hashCode() : 0);
         result = 31 * result + (orgDesc != null ? orgDesc.hashCode() : 0);
+        result = 31 * result + rating;
         return result;
-    }
-
-    @OneToMany(mappedBy = "organizationByOrgName")
-    public Collection<CharacterorganizationEntity> getCharacterorganizationsByOrgName() {
-        return characterorganizationsByOrgName;
-    }
-
-    public void setCharacterorganizationsByOrgName(Collection<CharacterorganizationEntity> characterorganizationsByOrgName) {
-        this.characterorganizationsByOrgName = characterorganizationsByOrgName;
     }
 
     @ManyToOne
@@ -81,16 +96,6 @@ public class OrganizationEntity {
 
     public void setCharacterByLeader(CharacterEntity characterByLeader) {
         this.characterByLeader = characterByLeader;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "hq", referencedColumnName = "place_id")
-    public PlaceEntity getPlaceByHq() {
-        return placeByHq;
-    }
-
-    public void setPlaceByHq(PlaceEntity placeByHq) {
-        this.placeByHq = placeByHq;
     }
 
     @ManyToOne

@@ -10,31 +10,53 @@
 </h:head>
 <h:body>
     <h:form>
-        <h:outputLabel for="bookID">
+        <h:outputLabel >
             <h:outputText value="Enter book ID"/> <!--//add get/set params-->
         </h:outputLabel>
-        <h:inputText id = "bookID" value="TODO"/>
+        <h:inputText id = "#{books.book.bookId}" value="TODO"/>
 
         <br/>
 
-        <h:outputLabel for="bookName">
+        <h:outputLabel >
             <h:outputText value="Enter book name"/>
         </h:outputLabel>
-        <h:inputText id = "bookName" value="TODO"/>
+        <h:inputText id = "#{books.book.bName}" value="TODO"/>
 
         <br/>
 
-        <h:outputLabel for="bookDesc">
+        <h:outputLabel >
             <h:outputText value="Enter book description"/>
         </h:outputLabel>
-        <h:inputText id = "bookDesc" value="TODO"/>
+        <h:inputText id = "#{books.book.bDesc}" value="TODO"/>
         <br/>
 
-        <h:commandButton id="cmdCreate" value="Create" /> <!-- //add actions-->
+        <h:commandButton id="cmdCreate" value="#{books.addBook}" /> <!-- //add actions-->
         <h:commandButton id="cmdRead" value="Read" />
         <h:commandButton id="cmdUpdt" value="Update" />
         <h:commandButton id="cmdDel" value="Delete" />
 
     </h:form>
+
+    <br/>
+    <br/>
+
+    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+    <h1>Create BookEntity</h1>
+    <f:view>
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputText value="bookId:"/>
+            <h:inputText value="#{bookEntity.entity.bookId}" title="bookId" />
+            <h:outputText value="bName:"/>
+            <h:inputText value="#{bookEntity.entity.bName}" title="bName" />
+            <h:outputText value="bDesc:"/>
+            <h:inputText value="#{bookEntity.entity.bDesc}" title="bDesc" />
+        </h:panelGrid>
+
+        <h:commandButton action="#{bookEntity.create}" value="Save" />
+        <h:commandButton action="bookEntityList" value="Cancel"/>
+        <br/>
+    </h:form>
+    </f:view>
 </h:body>
 </html>

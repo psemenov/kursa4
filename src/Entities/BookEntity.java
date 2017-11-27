@@ -1,18 +1,33 @@
 package Entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "book", schema = "public", catalog = "postgres")
 public class BookEntity {
-    private int bookId;
-    private String bName;
-    private String bDesc;
-    private Collection<EpisodeEntity> episodesByBookId;
 
     @Id
     @Column(name = "book_id")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private int bookId;
+
+    @Basic
+    @Column(name = "b_name")
+    private String bName;
+
+    @Basic
+    @Column(name = "b_desc")
+    private String bDesc;
+
+    @Basic
+    @Column(name = "rating")
+    private int rating;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id" , referencedColumnName = "user_id" , nullable = false)
+    private UsersEntity userByUserId;
+
+
     public int getBookId() {
         return bookId;
     }
@@ -21,8 +36,7 @@ public class BookEntity {
         this.bookId = bookId;
     }
 
-    @Basic
-    @Column(name = "b_name")
+
     public String getbName() {
         return bName;
     }
@@ -31,14 +45,30 @@ public class BookEntity {
         this.bName = bName;
     }
 
-    @Basic
-    @Column(name = "b_desc")
+
     public String getbDesc() {
         return bDesc;
     }
 
     public void setbDesc(String bDesc) {
         this.bDesc = bDesc;
+    }
+
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public UsersEntity getUserByUserId() {
+        return userByUserId;
+    }
+
+    public void setUserByUserId(UsersEntity userByUserId) {
+        this.userByUserId = userByUserId;
     }
 
     @Override
@@ -49,6 +79,7 @@ public class BookEntity {
         BookEntity that = (BookEntity) o;
 
         if (bookId != that.bookId) return false;
+        if (rating != that.rating) return false;
         if (bName != null ? !bName.equals(that.bName) : that.bName != null) return false;
         if (bDesc != null ? !bDesc.equals(that.bDesc) : that.bDesc != null) return false;
 
@@ -60,15 +91,7 @@ public class BookEntity {
         int result = bookId;
         result = 31 * result + (bName != null ? bName.hashCode() : 0);
         result = 31 * result + (bDesc != null ? bDesc.hashCode() : 0);
+        result = 31 * result + rating;
         return result;
-    }
-
-    @OneToMany(mappedBy = "bookByBookId")
-    public Collection<EpisodeEntity> getEpisodesByBookId() {
-        return episodesByBookId;
-    }
-
-    public void setEpisodesByBookId(Collection<EpisodeEntity> episodesByBookId) {
-        this.episodesByBookId = episodesByBookId;
     }
 }

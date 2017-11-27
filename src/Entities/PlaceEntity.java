@@ -1,7 +1,6 @@
 package Entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "place", schema = "public", catalog = "postgres")
@@ -11,11 +10,10 @@ public class PlaceEntity {
     private String details;
     private boolean status;
     private String regime;
-    private Collection<OrganizationEntity> organizationsByPlaceId;
+    private int rating;
     private PlaceEntity placeByLocationId;
-    private Collection<PlaceEntity> placesByPlaceId;
     private EpisodeEntity episodeByEpisodeId;
-    private Collection<PlaceAuthorityEntity> placeAuthoritiesByPlaceId;
+    private UsersEntity usersByUserId;
 
     @Id
     @Column(name = "place_id")
@@ -67,6 +65,16 @@ public class PlaceEntity {
         this.regime = regime;
     }
 
+    @Basic
+    @Column(name = "rating")
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -76,6 +84,7 @@ public class PlaceEntity {
 
         if (placeId != that.placeId) return false;
         if (status != that.status) return false;
+        if (rating != that.rating) return false;
         if (placeName != null ? !placeName.equals(that.placeName) : that.placeName != null) return false;
         if (details != null ? !details.equals(that.details) : that.details != null) return false;
         if (regime != null ? !regime.equals(that.regime) : that.regime != null) return false;
@@ -90,16 +99,8 @@ public class PlaceEntity {
         result = 31 * result + (details != null ? details.hashCode() : 0);
         result = 31 * result + (status ? 1 : 0);
         result = 31 * result + (regime != null ? regime.hashCode() : 0);
+        result = 31 * result + rating;
         return result;
-    }
-
-    @OneToMany(mappedBy = "placeByHq")
-    public Collection<OrganizationEntity> getOrganizationsByPlaceId() {
-        return organizationsByPlaceId;
-    }
-
-    public void setOrganizationsByPlaceId(Collection<OrganizationEntity> organizationsByPlaceId) {
-        this.organizationsByPlaceId = organizationsByPlaceId;
     }
 
     @ManyToOne
@@ -112,15 +113,6 @@ public class PlaceEntity {
         this.placeByLocationId = placeByLocationId;
     }
 
-    @OneToMany(mappedBy = "placeByLocationId")
-    public Collection<PlaceEntity> getPlacesByPlaceId() {
-        return placesByPlaceId;
-    }
-
-    public void setPlacesByPlaceId(Collection<PlaceEntity> placesByPlaceId) {
-        this.placesByPlaceId = placesByPlaceId;
-    }
-
     @ManyToOne
     @JoinColumn(name = "episode_id", referencedColumnName = "episode_id")
     public EpisodeEntity getEpisodeByEpisodeId() {
@@ -131,12 +123,13 @@ public class PlaceEntity {
         this.episodeByEpisodeId = episodeByEpisodeId;
     }
 
-    @OneToMany(mappedBy = "placeByPlaceId")
-    public Collection<PlaceAuthorityEntity> getPlaceAuthoritiesByPlaceId() {
-        return placeAuthoritiesByPlaceId;
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false)
+    public UsersEntity getUsersByUserId() {
+        return usersByUserId;
     }
 
-    public void setPlaceAuthoritiesByPlaceId(Collection<PlaceAuthorityEntity> placeAuthoritiesByPlaceId) {
-        this.placeAuthoritiesByPlaceId = placeAuthoritiesByPlaceId;
+    public void setUsersByUserId(UsersEntity usersByUserId) {
+        this.usersByUserId = usersByUserId;
     }
 }

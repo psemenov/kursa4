@@ -1,7 +1,6 @@
 package Entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "nation", schema = "public", catalog = "postgres")
@@ -11,12 +10,8 @@ public class NationEntity {
     private Integer placeId;
     private String regime;
     private String nDesc;
-    private Collection<CharacterEntity> charactersByNationId;
-    private Collection<MilitaryTechnologyEntity> militaryTechnologiesByNationId;
-    private Collection<MtechnationEntity> mtechnationsByNationId;
+    private int rating;
     private MagicEntity magicByMId;
-    private NationleaderEntity nationleaderByNationId;
-    private Collection<PlaceAuthorityEntity> placeAuthoritiesByNationId;
 
     @Id
     @Column(name = "nation_id")
@@ -68,6 +63,16 @@ public class NationEntity {
         this.nDesc = nDesc;
     }
 
+    @Basic
+    @Column(name = "rating")
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -76,6 +81,7 @@ public class NationEntity {
         NationEntity that = (NationEntity) o;
 
         if (nationId != that.nationId) return false;
+        if (rating != that.rating) return false;
         if (nationName != null ? !nationName.equals(that.nationName) : that.nationName != null) return false;
         if (placeId != null ? !placeId.equals(that.placeId) : that.placeId != null) return false;
         if (regime != null ? !regime.equals(that.regime) : that.regime != null) return false;
@@ -91,34 +97,8 @@ public class NationEntity {
         result = 31 * result + (placeId != null ? placeId.hashCode() : 0);
         result = 31 * result + (regime != null ? regime.hashCode() : 0);
         result = 31 * result + (nDesc != null ? nDesc.hashCode() : 0);
+        result = 31 * result + rating;
         return result;
-    }
-
-    @OneToMany(mappedBy = "nationByNationId")
-    public Collection<CharacterEntity> getCharactersByNationId() {
-        return charactersByNationId;
-    }
-
-    public void setCharactersByNationId(Collection<CharacterEntity> charactersByNationId) {
-        this.charactersByNationId = charactersByNationId;
-    }
-
-    @OneToMany(mappedBy = "nationByNationId")
-    public Collection<MilitaryTechnologyEntity> getMilitaryTechnologiesByNationId() {
-        return militaryTechnologiesByNationId;
-    }
-
-    public void setMilitaryTechnologiesByNationId(Collection<MilitaryTechnologyEntity> militaryTechnologiesByNationId) {
-        this.militaryTechnologiesByNationId = militaryTechnologiesByNationId;
-    }
-
-    @OneToMany(mappedBy = "nationByNationId")
-    public Collection<MtechnationEntity> getMtechnationsByNationId() {
-        return mtechnationsByNationId;
-    }
-
-    public void setMtechnationsByNationId(Collection<MtechnationEntity> mtechnationsByNationId) {
-        this.mtechnationsByNationId = mtechnationsByNationId;
     }
 
     @ManyToOne
@@ -129,23 +109,5 @@ public class NationEntity {
 
     public void setMagicByMId(MagicEntity magicByMId) {
         this.magicByMId = magicByMId;
-    }
-
-    @OneToOne(mappedBy = "nationByNationId")
-    public NationleaderEntity getNationleaderByNationId() {
-        return nationleaderByNationId;
-    }
-
-    public void setNationleaderByNationId(NationleaderEntity nationleaderByNationId) {
-        this.nationleaderByNationId = nationleaderByNationId;
-    }
-
-    @OneToMany(mappedBy = "nationByNationId")
-    public Collection<PlaceAuthorityEntity> getPlaceAuthoritiesByNationId() {
-        return placeAuthoritiesByNationId;
-    }
-
-    public void setPlaceAuthoritiesByNationId(Collection<PlaceAuthorityEntity> placeAuthoritiesByNationId) {
-        this.placeAuthoritiesByNationId = placeAuthoritiesByNationId;
     }
 }

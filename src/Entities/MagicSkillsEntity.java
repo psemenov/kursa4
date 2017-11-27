@@ -9,7 +9,7 @@ public class MagicSkillsEntity {
     private String mskillName;
     private String mskillLevel;
     private String mskillDesc;
-    private MagicEntity magicByMId;
+    private int rating;
 
     @Id
     @Column(name = "mskill_id")
@@ -51,6 +51,16 @@ public class MagicSkillsEntity {
         this.mskillDesc = mskillDesc;
     }
 
+    @Basic
+    @Column(name = "rating")
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -59,6 +69,7 @@ public class MagicSkillsEntity {
         MagicSkillsEntity that = (MagicSkillsEntity) o;
 
         if (mskillId != that.mskillId) return false;
+        if (rating != that.rating) return false;
         if (mskillName != null ? !mskillName.equals(that.mskillName) : that.mskillName != null) return false;
         if (mskillLevel != null ? !mskillLevel.equals(that.mskillLevel) : that.mskillLevel != null) return false;
         if (mskillDesc != null ? !mskillDesc.equals(that.mskillDesc) : that.mskillDesc != null) return false;
@@ -72,16 +83,7 @@ public class MagicSkillsEntity {
         result = 31 * result + (mskillName != null ? mskillName.hashCode() : 0);
         result = 31 * result + (mskillLevel != null ? mskillLevel.hashCode() : 0);
         result = 31 * result + (mskillDesc != null ? mskillDesc.hashCode() : 0);
+        result = 31 * result + rating;
         return result;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "m_id", referencedColumnName = "m_id", nullable = false)
-    public MagicEntity getMagicByMId() {
-        return magicByMId;
-    }
-
-    public void setMagicByMId(MagicEntity magicByMId) {
-        this.magicByMId = magicByMId;
     }
 }

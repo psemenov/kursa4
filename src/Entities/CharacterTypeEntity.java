@@ -1,19 +1,44 @@
 package Entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "character_type", schema = "public", catalog = "postgres")
 public class CharacterTypeEntity {
-    private int ctypeId;
-    private String ctypeName;
-    private String csubtypeName;
-    private String ctypeDesc;
-    private Collection<CharacterEntity> charactersByCtypeId;
 
     @Id
     @Column(name = "ctype_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int ctypeId;
+
+    @Basic
+    @Column(name = "ctype_name")
+    private String ctypeName;
+
+    @Basic
+    @Column(name = "csubtype_name")
+    private String csubtypeName;
+
+    @Basic
+    @Column(name = "ctype_desc")
+    private String ctypeDesc;
+
+    @Basic
+    @Column(name = "rating")
+    private int rating;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id" , referencedColumnName = "user_id" , nullable = false)
+    private UsersEntity userByUserId;
+
+    public UsersEntity getUserByUserId() {
+        return userByUserId;
+    }
+
+    public void setUserByUserId(UsersEntity userByUserId) {
+        this.userByUserId = userByUserId;
+    }
+
     public int getCtypeId() {
         return ctypeId;
     }
@@ -22,8 +47,7 @@ public class CharacterTypeEntity {
         this.ctypeId = ctypeId;
     }
 
-    @Basic
-    @Column(name = "ctype_name")
+
     public String getCtypeName() {
         return ctypeName;
     }
@@ -32,8 +56,7 @@ public class CharacterTypeEntity {
         this.ctypeName = ctypeName;
     }
 
-    @Basic
-    @Column(name = "csubtype_name")
+
     public String getCsubtypeName() {
         return csubtypeName;
     }
@@ -42,14 +65,22 @@ public class CharacterTypeEntity {
         this.csubtypeName = csubtypeName;
     }
 
-    @Basic
-    @Column(name = "ctype_desc")
+
     public String getCtypeDesc() {
         return ctypeDesc;
     }
 
     public void setCtypeDesc(String ctypeDesc) {
         this.ctypeDesc = ctypeDesc;
+    }
+
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     @Override
@@ -60,6 +91,7 @@ public class CharacterTypeEntity {
         CharacterTypeEntity that = (CharacterTypeEntity) o;
 
         if (ctypeId != that.ctypeId) return false;
+        if (rating != that.rating) return false;
         if (ctypeName != null ? !ctypeName.equals(that.ctypeName) : that.ctypeName != null) return false;
         if (csubtypeName != null ? !csubtypeName.equals(that.csubtypeName) : that.csubtypeName != null) return false;
         if (ctypeDesc != null ? !ctypeDesc.equals(that.ctypeDesc) : that.ctypeDesc != null) return false;
@@ -73,15 +105,7 @@ public class CharacterTypeEntity {
         result = 31 * result + (ctypeName != null ? ctypeName.hashCode() : 0);
         result = 31 * result + (csubtypeName != null ? csubtypeName.hashCode() : 0);
         result = 31 * result + (ctypeDesc != null ? ctypeDesc.hashCode() : 0);
+        result = 31 * result + rating;
         return result;
-    }
-
-    @OneToMany(mappedBy = "characterTypeByCtypeId")
-    public Collection<CharacterEntity> getCharactersByCtypeId() {
-        return charactersByCtypeId;
-    }
-
-    public void setCharactersByCtypeId(Collection<CharacterEntity> charactersByCtypeId) {
-        this.charactersByCtypeId = charactersByCtypeId;
     }
 }
