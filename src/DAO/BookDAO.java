@@ -36,12 +36,6 @@ public class BookDAO {
         em.getTransaction().begin();
         em.merge(book);
         em.getTransaction().commit();
-//        em.getTransaction().begin();
-//        String sql = "update book set b_name= '"+book.getbName()+"' " +
-//                ", b_desc='"+book.getbDesc()+"' , user_id="+book.getUserByUserId().getUserId()+" ," +
-//                "rating ="+book.getRating()+" where book_id ="+id;
-//       em.createQuery(sql).executeUpdate();
-//        em.getTransaction().commit();
         return book;
     }
 

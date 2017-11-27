@@ -1,8 +1,9 @@
-import DAO.BookDAO;
-import Entities.BookEntity;
+import DAO.MagicSkillsDAO;
+import DAO.UsersDAO;
+import Entities.MagicEntity;
+import Entities.MagicSkillsEntity;
 import Entities.UsersEntity;
 
-import javax.faces.component.UIComponent;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -13,17 +14,22 @@ public class Main {
         EntityManagerFactory emf;
         emf = Persistence.createEntityManagerFactory("NewPersistenceUnit");
         em = emf.createEntityManager();
-        BookDAO bookDAO = new BookDAO(em);
-        UsersEntity user = new UsersEntity();
-        user.setUserId(1);
-        user.setLogin("gggg");
-        user.setPassword("4r4r4");
-        user.setEmail("ewea@eeeq");
 
-        BookEntity book1 = new BookEntity("name134" , 122 , user);
+        em.getTransaction().begin();
+        UsersEntity use = em.find(UsersEntity.class, 2);
+        MagicSkillsEntity xxx = new MagicSkillsEntity();
+        MagicEntity yyy = new MagicEntity();
+        yyy.setmType("kek");
+        yyy.setUserByUserId(use);
+        em.persist(yyy);
+        //em.find(MagicSkillsEntity.class, 1);
+        xxx.setMagicByMagicId(yyy);
+        xxx.setMskillName("chmo");
+        xxx.setUserByUserId(use);
+        MagicSkillsDAO ud = new MagicSkillsDAO(em);
+        ud.create(xxx);
+        em.getTransaction().commit();
 
-        BookEntity book = bookDAO.read(14);
-        book.setbDesc("aaaaaeeeee");
-        bookDAO.update(book);
+
     }
 }
