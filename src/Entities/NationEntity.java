@@ -5,16 +5,40 @@ import javax.persistence.*;
 @Entity
 @Table(name = "nation", schema = "public", catalog = "postgres")
 public class NationEntity {
-    private int nationId;
-    private String nationName;
-    private Integer placeId;
-    private String regime;
-    private String nDesc;
-    private int rating;
-    private MagicEntity magicByMId;
-
     @Id
     @Column(name = "nation_id")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private int nationId;
+
+    @Basic
+    @Column(name = "nation_name", nullable = false, unique = true)
+    private String nationName;
+
+    @Basic
+    @Column(name = "place_id")
+    private Integer placeId;
+
+    @Basic
+    @Column(name = "regime")
+    private String regime;
+
+    @Basic
+    @Column(name = "n_desc", unique = true)
+    private String nDesc;
+
+    @Basic
+    @Column(name = "rating")
+    private int rating = 0;
+
+    @ManyToOne
+    @JoinColumn(name = "m_id", referencedColumnName = "m_id", nullable = false, unique = true)
+    private MagicEntity magicByMId;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id" , referencedColumnName = "user_id", nullable = false)
+    private UsersEntity usersByUserId;
+
+
     public int getNationId() {
         return nationId;
     }
@@ -23,8 +47,7 @@ public class NationEntity {
         this.nationId = nationId;
     }
 
-    @Basic
-    @Column(name = "nation_name")
+
     public String getNationName() {
         return nationName;
     }
@@ -33,8 +56,7 @@ public class NationEntity {
         this.nationName = nationName;
     }
 
-    @Basic
-    @Column(name = "place_id")
+
     public Integer getPlaceId() {
         return placeId;
     }
@@ -43,8 +65,7 @@ public class NationEntity {
         this.placeId = placeId;
     }
 
-    @Basic
-    @Column(name = "regime")
+
     public String getRegime() {
         return regime;
     }
@@ -53,8 +74,7 @@ public class NationEntity {
         this.regime = regime;
     }
 
-    @Basic
-    @Column(name = "n_desc")
+
     public String getnDesc() {
         return nDesc;
     }
@@ -63,8 +83,7 @@ public class NationEntity {
         this.nDesc = nDesc;
     }
 
-    @Basic
-    @Column(name = "rating")
+
     public int getRating() {
         return rating;
     }
@@ -101,13 +120,20 @@ public class NationEntity {
         return result;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "m_id", referencedColumnName = "m_id", nullable = false)
+
     public MagicEntity getMagicByMId() {
         return magicByMId;
     }
 
     public void setMagicByMId(MagicEntity magicByMId) {
         this.magicByMId = magicByMId;
+    }
+
+    public UsersEntity getUsersByUserId() {
+        return usersByUserId;
+    }
+
+    public void setUsersByUserId(UsersEntity usersByUserId) {
+        this.usersByUserId = usersByUserId;
     }
 }

@@ -5,17 +5,44 @@ import javax.persistence.*;
 @Entity
 @Table(name = "organization", schema = "public", catalog = "postgres")
 public class OrganizationEntity {
+    @Id
+    @Column(name = "ord_id")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int orgId;
+
+    @Basic
+    @Column(name = "org_name", nullable = false)
     private String orgName;
+
+    @Basic
+    @Column(name = "org_desc", unique = true)
     private String orgDesc;
-    private int rating;
+
+    @Basic
+    @Column(name = "rating", nullable = false)
+    private int rating = 0;
+
+
+    @ManyToOne
+    @JoinColumn(name = "founder" , referencedColumnName = "character_id", nullable = false)
     private CharacterEntity characterByFounder;
+
+    @ManyToOne
+    @JoinColumn(name = "leader" , referencedColumnName = "character_id", nullable = false, unique = true)
     private CharacterEntity characterByLeader;
+
+    @ManyToOne
+    @JoinColumn(name = "episode_id" , referencedColumnName = "episode_id", nullable = false)
     private EpisodeEntity episodeByEpisodeId;
 
-    @Id
-    @Column(name = "org_id")
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @ManyToOne
+    @JoinColumn(name = "user_id" , referencedColumnName = "user_id", nullable = false)
+    private UsersEntity usersByUserId;
+
+    @ManyToOne
+    @JoinColumn(name = "HQ" , referencedColumnName = "place_id")
+    private PlaceEntity HQ;
+
     public int getOrgId() {
         return orgId;
     }
@@ -24,8 +51,7 @@ public class OrganizationEntity {
         this.orgId = orgId;
     }
 
-    @Basic
-    @Column(name = "org_name")
+
     public String getOrgName() {
         return orgName;
     }
@@ -34,8 +60,7 @@ public class OrganizationEntity {
         this.orgName = orgName;
     }
 
-    @Basic
-    @Column(name = "org_desc")
+
     public String getOrgDesc() {
         return orgDesc;
     }
@@ -44,8 +69,7 @@ public class OrganizationEntity {
         this.orgDesc = orgDesc;
     }
 
-    @Basic
-    @Column(name = "rating")
+
     public int getRating() {
         return rating;
     }
@@ -78,8 +102,6 @@ public class OrganizationEntity {
         return result;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "founder", referencedColumnName = "character_id", nullable = false)
     public CharacterEntity getCharacterByFounder() {
         return characterByFounder;
     }
@@ -88,8 +110,6 @@ public class OrganizationEntity {
         this.characterByFounder = characterByFounder;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "leader", referencedColumnName = "character_id", nullable = false)
     public CharacterEntity getCharacterByLeader() {
         return characterByLeader;
     }
@@ -98,13 +118,28 @@ public class OrganizationEntity {
         this.characterByLeader = characterByLeader;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "episode_id", referencedColumnName = "episode_id", nullable = false)
     public EpisodeEntity getEpisodeByEpisodeId() {
         return episodeByEpisodeId;
     }
 
     public void setEpisodeByEpisodeId(EpisodeEntity episodeByEpisodeId) {
         this.episodeByEpisodeId = episodeByEpisodeId;
+    }
+
+    public UsersEntity getUsersByUserId() {
+        return usersByUserId;
+    }
+
+    public void setUsersByUserId(UsersEntity usersByUserId) {
+        this.usersByUserId = usersByUserId;
+    }
+
+
+    public PlaceEntity getHQ() {
+        return HQ;
+    }
+
+    public void setHQ(PlaceEntity HQ) {
+        this.HQ = HQ;
     }
 }

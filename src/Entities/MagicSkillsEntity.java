@@ -5,14 +5,35 @@ import javax.persistence.*;
 @Entity
 @Table(name = "magic_skills", schema = "public", catalog = "postgres")
 public class MagicSkillsEntity {
-    private int mskillId;
-    private String mskillName;
-    private String mskillLevel;
-    private String mskillDesc;
-    private int rating;
-
     @Id
     @Column(name = "mskill_id")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private int mskillId;
+
+    @Basic
+    @Column(name = "mskill_name", nullable = false, unique = true)
+    private String mskillName;
+    @Basic
+    @Column(name = "mskill_level")
+    private String mskillLevel;
+
+    @Basic
+    @Column(name = "mskill_desc", unique = true)
+    private String mskillDesc;
+
+    @Basic
+    @Column(name = "rating", nullable = false)
+    private int rating = 0;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id" , referencedColumnName = "user_id" , nullable = false)
+    private UsersEntity userByUserId;
+
+
+    @ManyToOne
+    @JoinColumn(name = "m_id" , referencedColumnName = "m_id" , nullable = false)
+    private MagicEntity magicByMagicId;
+
     public int getMskillId() {
         return mskillId;
     }
@@ -21,8 +42,7 @@ public class MagicSkillsEntity {
         this.mskillId = mskillId;
     }
 
-    @Basic
-    @Column(name = "mskill_name")
+
     public String getMskillName() {
         return mskillName;
     }
@@ -31,8 +51,7 @@ public class MagicSkillsEntity {
         this.mskillName = mskillName;
     }
 
-    @Basic
-    @Column(name = "mskill_level")
+
     public String getMskillLevel() {
         return mskillLevel;
     }
@@ -41,8 +60,7 @@ public class MagicSkillsEntity {
         this.mskillLevel = mskillLevel;
     }
 
-    @Basic
-    @Column(name = "mskill_desc")
+
     public String getMskillDesc() {
         return mskillDesc;
     }
@@ -51,8 +69,7 @@ public class MagicSkillsEntity {
         this.mskillDesc = mskillDesc;
     }
 
-    @Basic
-    @Column(name = "rating")
+
     public int getRating() {
         return rating;
     }
@@ -85,5 +102,21 @@ public class MagicSkillsEntity {
         result = 31 * result + (mskillDesc != null ? mskillDesc.hashCode() : 0);
         result = 31 * result + rating;
         return result;
+    }
+
+    public UsersEntity getUserByUserId() {
+        return userByUserId;
+    }
+
+    public void setUserByUserId(UsersEntity userByUserId) {
+        this.userByUserId = userByUserId;
+    }
+
+    public MagicEntity getMagicByMagicId() {
+        return magicByMagicId;
+    }
+
+    public void setMagicByMagicId(MagicEntity magicByMagicId) {
+        this.magicByMagicId = magicByMagicId;
     }
 }

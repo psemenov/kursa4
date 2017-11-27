@@ -5,18 +5,44 @@ import javax.persistence.*;
 @Entity
 @Table(name = "place", schema = "public", catalog = "postgres")
 public class PlaceEntity {
-    private int placeId;
-    private String placeName;
-    private String details;
-    private boolean status;
-    private String regime;
-    private int rating;
-    private PlaceEntity placeByLocationId;
-    private EpisodeEntity episodeByEpisodeId;
-    private UsersEntity usersByUserId;
-
     @Id
     @Column(name = "place_id")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private int placeId;
+
+    @Basic
+    @Column(name = "place_name", unique = true)
+    private String placeName;
+
+    @Basic
+    @Column(name = "details", unique = true)
+    private String details;
+
+    @Basic
+    @Column(name = "status", nullable = false)
+    private boolean status;
+
+    @Basic
+    @Column(name = "regime")
+    private String regime;
+
+    @Basic
+    @Column(name = "rating")
+    private int rating = 0;
+
+    @ManyToOne
+    @JoinColumn(name = "location_id" , referencedColumnName = "location_id")
+    private PlaceEntity placeByLocationId;
+
+    @ManyToOne
+    @JoinColumn(name = "episode_id" , referencedColumnName = "episode_id")
+    private EpisodeEntity episodeByEpisodeId;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id" , referencedColumnName = "user_id")
+    private UsersEntity usersByUserId;
+
+
     public int getPlaceId() {
         return placeId;
     }
@@ -25,8 +51,7 @@ public class PlaceEntity {
         this.placeId = placeId;
     }
 
-    @Basic
-    @Column(name = "place_name")
+
     public String getPlaceName() {
         return placeName;
     }
@@ -35,8 +60,7 @@ public class PlaceEntity {
         this.placeName = placeName;
     }
 
-    @Basic
-    @Column(name = "details")
+
     public String getDetails() {
         return details;
     }
@@ -45,8 +69,7 @@ public class PlaceEntity {
         this.details = details;
     }
 
-    @Basic
-    @Column(name = "status")
+
     public boolean isStatus() {
         return status;
     }
@@ -55,8 +78,7 @@ public class PlaceEntity {
         this.status = status;
     }
 
-    @Basic
-    @Column(name = "regime")
+
     public String getRegime() {
         return regime;
     }
@@ -65,8 +87,7 @@ public class PlaceEntity {
         this.regime = regime;
     }
 
-    @Basic
-    @Column(name = "rating")
+
     public int getRating() {
         return rating;
     }

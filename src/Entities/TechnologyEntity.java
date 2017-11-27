@@ -5,17 +5,40 @@ import javax.persistence.*;
 @Entity
 @Table(name = "technology", schema = "public", catalog = "postgres")
 public class TechnologyEntity {
+    @Id
+    @Column(name = "mTech_Id")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int mtechId;
+
+    @Basic
+    @Column(name = "mTech_name", nullable = false, unique = true)
     private String mtechName;
+
+    @Basic
+    @Column(name = "mTech_type", nullable = false)
     private String mtechType;
+
+    @Basic
+    @Column(name = "mTech_type", unique = true)
     private String mtechDesc;
-    private int rating;
+
+    @Basic
+    @Column(name = "rating", nullable = false)
+    private int rating = 0;
+
+    @ManyToOne
+    @JoinColumn(name = "character_id" , referencedColumnName = "character_id")
     private CharacterEntity characterByCharacterId;
+
+    @ManyToOne
+    @JoinColumn(name = "nation_id" , referencedColumnName = "nation_ID")
     private NationEntity nationByNationId;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id" , referencedColumnName = "user_id", nullable = false)
     private UsersEntity usersByUserId;
 
-    @Id
-    @Column(name = "mtech_id")
+
     public int getMtechId() {
         return mtechId;
     }
@@ -24,8 +47,7 @@ public class TechnologyEntity {
         this.mtechId = mtechId;
     }
 
-    @Basic
-    @Column(name = "mtech_name")
+
     public String getMtechName() {
         return mtechName;
     }
@@ -34,8 +56,7 @@ public class TechnologyEntity {
         this.mtechName = mtechName;
     }
 
-    @Basic
-    @Column(name = "mtech_type")
+
     public String getMtechType() {
         return mtechType;
     }
@@ -44,8 +65,7 @@ public class TechnologyEntity {
         this.mtechType = mtechType;
     }
 
-    @Basic
-    @Column(name = "mtech_desc")
+
     public String getMtechDesc() {
         return mtechDesc;
     }
@@ -54,8 +74,7 @@ public class TechnologyEntity {
         this.mtechDesc = mtechDesc;
     }
 
-    @Basic
-    @Column(name = "rating")
+
     public int getRating() {
         return rating;
     }

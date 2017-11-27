@@ -5,18 +5,44 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users", schema = "public", catalog = "postgres")
 public class UsersEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id", updatable = false, nullable = false, unique = true)
     private int userId;
+
+    @Basic
+    @Column(name = "login", nullable = false, unique = true)
     private String login;
+
+    @Basic
+    @Column(name = "password", nullable = false)
     private String password;
+
+    @Basic
+    @Column(name = "email", nullable = false)
     private String email;
-    private Integer rating;
+
+    @Basic
+    @Column(name = "rating")
+    private Integer rating = 0;
+
+    @Basic
+    @Column(name = "firstname")
     private String firstname;
+
+    @Basic
+    @Column(name = "lastname")
     private String lastname;
+
+    @Basic
+    @Column(name = "avatarPath")
     private String avatarpath;
+
+    @Basic
+    @Column(name = "description")
     private String description;
 
-    @Id
-    @Column(name = "user_id")
+
     public int getUserId() {
         return userId;
     }
@@ -25,8 +51,7 @@ public class UsersEntity {
         this.userId = userId;
     }
 
-    @Basic
-    @Column(name = "login")
+
     public String getLogin() {
         return login;
     }
@@ -35,8 +60,7 @@ public class UsersEntity {
         this.login = login;
     }
 
-    @Basic
-    @Column(name = "password")
+
     public String getPassword() {
         return password;
     }
@@ -45,8 +69,7 @@ public class UsersEntity {
         this.password = password;
     }
 
-    @Basic
-    @Column(name = "email")
+
     public String getEmail() {
         return email;
     }
@@ -55,8 +78,7 @@ public class UsersEntity {
         this.email = email;
     }
 
-    @Basic
-    @Column(name = "rating")
+
     public Integer getRating() {
         return rating;
     }
@@ -65,8 +87,7 @@ public class UsersEntity {
         this.rating = rating;
     }
 
-    @Basic
-    @Column(name = "firstname")
+
     public String getFirstname() {
         return firstname;
     }
@@ -75,8 +96,7 @@ public class UsersEntity {
         this.firstname = firstname;
     }
 
-    @Basic
-    @Column(name = "lastname")
+
     public String getLastname() {
         return lastname;
     }
@@ -85,8 +105,7 @@ public class UsersEntity {
         this.lastname = lastname;
     }
 
-    @Basic
-    @Column(name = "avatarpath")
+
     public String getAvatarpath() {
         return avatarpath;
     }
@@ -95,8 +114,7 @@ public class UsersEntity {
         this.avatarpath = avatarpath;
     }
 
-    @Basic
-    @Column(name = "description")
+
     public String getDescription() {
         return description;
     }
