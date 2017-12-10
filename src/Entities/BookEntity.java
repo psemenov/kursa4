@@ -3,7 +3,11 @@ package Entities;
 import javax.persistence.*;
 
 @Entity(name= "book")
-//@Table(name = "book", schema = "public", catalog = "postgres")
+@Table(name = "book", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "Book.readAll" , query = "Select p from book p") ,
+        @NamedQuery(name = "Book.deleteAll" , query = "delete from book p")
+})
 public class BookEntity {
 
     @Id

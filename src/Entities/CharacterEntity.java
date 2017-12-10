@@ -4,6 +4,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "character", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "Character.readAllMen" ,query = "Select p from CharacterEntity p where p.gender='мужчина'") ,
+        @NamedQuery(name = "Character.readAllWomen" ,query = "Select p from CharacterEntity p where p.gender='женщина'") ,
+        @NamedQuery(name = "Character.readAll" , query =  "select p from CharacterEntity p ") ,
+        @NamedQuery(name = "Character.deleteAll" , query = "delete from CharacterTypeEntity p")
+})
 public class CharacterEntity {
 
     @Id

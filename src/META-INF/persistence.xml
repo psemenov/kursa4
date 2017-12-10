@@ -16,23 +16,13 @@
         <class>Entities.PlaceEntity</class>
         <class>Entities.ArticleEntity</class>
         <class>Entities.TechnologyEntity</class>
-        <class>Entities.UserbookEntity</class>
-        <class>Entities.UsercharacterEntity</class>
-        <class>Entities.UsercharactertypeEntity</class>
-        <class>Entities.UserepisodeEntity</class>
-        <class>Entities.UsermagicEntity</class>
-        <class>Entities.UsermagicskillsEntity</class>
-        <class>Entities.UsernationEntity</class>
-        <class>Entities.UserorganizationEntity</class>
-        <class>Entities.UserplaceEntity</class>
         <class>Entities.UsersEntity</class>
-        <class>Entities.UsertechnologyEntity</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
             <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
             <property name="hibernate.connection.username" value="postgres"/>
-            <property name="hibernate.connection.password" value="123"/>
+            <property name="hibernate.connection.password" value="489052369"/>
             <property name="hibernate.archive.autodetection" value="class"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>

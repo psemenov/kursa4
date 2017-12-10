@@ -4,6 +4,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "article", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "Article.readAll" , query = "SELECT u from ArticleEntity u") ,
+        @NamedQuery(name = "Article.deleteAll" , query = "delete from ArticleEntity p")
+})
 public class ArticleEntity {
 
 

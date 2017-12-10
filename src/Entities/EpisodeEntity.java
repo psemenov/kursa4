@@ -5,6 +5,10 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "episode", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "Episode.readAll" , query = "select p from EpisodeEntity p"),
+        @NamedQuery(name = "Episode.deleteAll" , query = "delete  from EpisodeEntity p")
+})
 public class EpisodeEntity {
 
     @Id
