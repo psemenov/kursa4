@@ -4,6 +4,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "magic_skills", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "MagicSkills.readAll" , query = "Select p from MagicSkillsEntity p") ,
+        @NamedQuery(name = "MagicSkills.deleteAll" , query = "delete from MagicSkillsEntity p")
+})
 public class MagicSkillsEntity {
     @Id
     @Column(name = "mskill_id")

@@ -1,5 +1,6 @@
 import DAO.MagicSkillsDAO;
 import DAO.UsersDAO;
+import Entities.BookEntity;
 import Entities.MagicEntity;
 import Entities.MagicSkillsEntity;
 import Entities.UsersEntity;
@@ -16,20 +17,13 @@ public class Main {
         em = emf.createEntityManager();
 
         em.getTransaction().begin();
-        UsersEntity use = em.find(UsersEntity.class, 2);
-        MagicSkillsEntity xxx = new MagicSkillsEntity();
-        MagicEntity yyy = new MagicEntity();
-        yyy.setmType("kek");
-        yyy.setUserByUserId(use);
-        em.persist(yyy);
-        //em.find(MagicSkillsEntity.class, 1);
-        xxx.setMagicByMagicId(yyy);
-        xxx.setMskillName("chmo");
-        xxx.setUserByUserId(use);
-        MagicSkillsDAO ud = new MagicSkillsDAO(em);
-        ud.create(xxx);
+        UsersEntity usr = new UsersEntity();
+        usr.setEmail("er");
+        usr.setLogin("usr");
+        usr.setPassword("666");
+        usr.setRating(1000000);
+        em.persist(usr);
         em.getTransaction().commit();
-
 
     }
 }

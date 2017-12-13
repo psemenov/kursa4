@@ -4,6 +4,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "users", schema = "public", catalog = "postgres")
+@NamedQueries({
+        @NamedQuery(name = "Users.readAll" , query = "Select p from UsersEntity p") ,
+        @NamedQuery(name = "Users.deleteAll" , query = "delete from UsersEntity p")
+})
 public class UsersEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
